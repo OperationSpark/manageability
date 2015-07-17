@@ -70,10 +70,10 @@ A brief clean up of the website project to make markup and css more manageable
 
 1. In the `nav.html` file, replace the href of both `<li>` to use a location hash inside of referencing a file, so, your nav items should look like this:
 
-````HTML
-<li><a href="#home">Home</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-````
+    ````HTML
+    <li><a href="#home">Home</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    ````
 
 2. From the file explorer, create a new file called `home.html`, and open it in the text editor.
 3. From within the `index.html` file, cut and paste all of the markup between the opening and closing `<main></main>` tags, BUT LEAVE the `<main></main>` tags in place.
@@ -85,31 +85,31 @@ A brief clean up of the website project to make markup and css more manageable
 9. Using the turnary operator, if we have a `hash` at all, assign the result of our `hash` slice to `template`, othewise, assign the value `home`
 9. Finally, call the method `loadTemplate(template);`, your full `initialize()` function should look like this:
 
-````javascript
-// other code...
-            
-            function initialize() {
-                var hash, template;
+    ````javascript
+    // other code...
                 
-                $("nav").load("nav.html");
+                function initialize() {
+                    var hash, template;
+                    
+                    $("nav").load("nav.html");
+                    
+                    hash = window.location.hash;
+                    template = hash ? hash.slice(1) : 'home';
+                    loadTemplate(template);
+                }
                 
-                hash = window.location.hash;
-                template = hash ? hash.slice(1) : 'home';
-                loadTemplate(template);
-            }
-            
-// other code...
-````
+    // other code...
+    ````
 
 10.  Within the same `<script>` tag, define a function called `loadTemplate()`, like so:
 
-````javascript
-// other code...
-            function loadTemplate(template) {
-                $("main").load(template + '.html');
-            }
-// other code...
-````
+    ````javascript
+    // other code...
+                function loadTemplate(template) {
+                    $("main").load(template + '.html');
+                }
+    // other code...
+    ````
 
 11. Save, switch back to your website, reload, notice by default or `home.html` template loads, and clicking on the **Home** nav item does the same.
 12. Repeat this pattern for `portfolio.html`!
