@@ -18,13 +18,20 @@ A brief clean up of the website project to make markup and css more manageable
 
 1. Google "jquery cdn".
 2. Paste `<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>` at the very bottom of the body tag, just above the closing `</body>`. We are now using jquery, a third party API for manipulating web pages, or the DOM. We're making use of a cdn to do so.
-3. On the line directly below the jquery script tag, but still inside the body tag, create a blank `<script></script>` tag. Explain that we can open scripts within an HTML page.
+3. On the line directly below the jquery script tag, but still inside the body tag, create a blank `<script></script>` tag. (Explain that we can open scripts within an HTML page.)
 4. Add as the very first line of code, a listener to the jquery:
         $(document).ready(initialize);
 5. Within the same `<script>` tag, create an initialize function and use jquery to load "nav.html":
 
 ````javascript
+// other code ...
+        <script>
+            $(document).ready(initialize);
+            
             function initialize() {
                 $("nav").load("nav.html");
             }
+        </script>
+    </body>
+</html>
 ````
