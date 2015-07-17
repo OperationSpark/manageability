@@ -45,6 +45,7 @@ A brief clean up of the website project to make markup and css more manageable
 ### Fragmenting with Hash
 
 > See:
+
 > 0. <a href="https://en.wikipedia.org/wiki/Fragment_identifier" target="_blank">Fragment identifier</a>
 
 > 1. <a href="https://blog.httpwatch.com/2011/03/01/6-things-you-should-know-about-fragment-urls/" target="_blank">6 things you should know about fragment urls</a>
