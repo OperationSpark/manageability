@@ -37,18 +37,18 @@ A brief clean up of the website project to make markup and css more manageable
         $(document).ready(initialize);
 5. Within the same `<script>` tag, create an initialize function and use jquery to load "nav.html":
 
-````javascript
-// other code ...
-        <script>
-            $(document).ready(initialize);
-            
-            function initialize() {
-                $("nav").load("nav.html");
-            }
-        </script>
-    </body>
-</html>
-````
+    ````javascript
+    // other code ...
+            <script>
+                $(document).ready(initialize);
+                
+                function initialize() {
+                    $("nav").load("nav.html");
+                }
+            </script>
+        </body>
+    </html>
+    ````
 
 6. Within the `index.html` file, cut and paste all of markup between the opening and closing `<nav></nav>` tags, BUT LEAVE the `<nav></nav>` in place.
 7. Save your `index.html`, switch back to your website, refresh: No nav!
