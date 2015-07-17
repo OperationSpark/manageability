@@ -1,3 +1,6 @@
+# Manageability
+A brief clean up of the website project to make markup and css more manageable
+
 **Table of Contents**
 
 - [Manageability](#manageability)
@@ -7,9 +10,6 @@
     - [TODO](#todo-1)
   - [Fragmenting with Hash](#fragmenting-with-hash)
     - [TODO](#todo-2)
-
-# Manageability
-A brief clean up of the website project to make markup and css more manageable
 
 ## Separate CSS
 
