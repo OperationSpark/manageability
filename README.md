@@ -45,6 +45,7 @@ A brief clean up of the website project to make markup and css more manageable
 ### Fragmenting with Hash
 
     See:
+    0. https://blog.httpwatch.com/2011/03/01/6-things-you-should-know-about-fragment-urls/
     1. https://en.wikipedia.org/wiki/Fragment_identifier
     2. http://blog.mgm-tp.com/2011/10/must-know-url-hashtechniques-for-ajax-applications/
 
