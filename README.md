@@ -1,7 +1,19 @@
-# manageability
+**Table of Contents**
+
+- [Manageability](#manageability)
+  - [Separate CSS](#separate-css)
+    - [TODO](#todo)
+  - [Modularize Markup](#modularize-markup)
+    - [TODO](#todo-1)
+  - [Fragmenting with Hash](#fragmenting-with-hash)
+    - [TODO](#todo-2)
+
+# Manageability
 A brief clean up of the website project to make markup and css more manageable
 
-### Separate CSS
+## Separate CSS
+
+### TODO
 
 0. Make sure your web server is running, and you have your website open in another browser tab.
 1. In the root directory of your website workspace, create a directory called css.
@@ -14,7 +26,9 @@ A brief clean up of the website project to make markup and css more manageable
 8. Google "How to link a CSS file": Answer => Create a `<link>` tag in the `<head>` of the index.html file, and link the path to the `custom.css` file.
 9. Save, switch back to your website, refresh, voila, we got style!
 
-### Modularize Markup
+## Modularize Markup
+
+### TODO
 
 1. Google "jquery cdn".
 2. Paste `<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>` at the very bottom of the body tag, just above the closing `</body>`. We are now using jquery, a third party API for manipulating web pages, or the DOM. We're making use of a cdn to do so.
@@ -42,7 +56,7 @@ A brief clean up of the website project to make markup and css more manageable
 9. Save your `index.html`, switch back to your website, refresh: We got nav!
 10. Open the debugger and break within the `initialize()` function.
 
-### Fragmenting with Hash
+## Fragmenting with Hash
 
 > See:
 
@@ -51,6 +65,8 @@ A brief clean up of the website project to make markup and css more manageable
 > 1. <a href="https://blog.httpwatch.com/2011/03/01/6-things-you-should-know-about-fragment-urls/" target="_blank">6 things you should know about fragment urls</a>
 
 > 2. <a href="http://blog.mgm-tp.com/2011/10/must-know-url-hashtechniques-for-ajax-applications/" target="_blank">Must know url hash techniques</a>
+
+### TODO
 
 1. In the `nav.html` file, replace the href of both `<li>` to use a location hash inside of referencing a file, so, your nav items should look like this:
 
