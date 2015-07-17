@@ -45,9 +45,9 @@ A brief clean up of the website project to make markup and css more manageable
 ### Fragmenting with Hash
 
     See:
-    0. https://blog.httpwatch.com/2011/03/01/6-things-you-should-know-about-fragment-urls/
-    1. https://en.wikipedia.org/wiki/Fragment_identifier
-    2. http://blog.mgm-tp.com/2011/10/must-know-url-hashtechniques-for-ajax-applications/
+    0. <a href="https://en.wikipedia.org/wiki/Fragment_identifier" target="_blank">Fragment identifier</a>
+    1. <a href="https://blog.httpwatch.com/2011/03/01/6-things-you-should-know-about-fragment-urls/" target="_blank">6 things you should know about fragment urls</a>
+    2. <a href="http://blog.mgm-tp.com/2011/10/must-know-url-hashtechniques-for-ajax-applications/" target="_blank">Must know url hash techniques</a>
 
 1. In the `nav.html` file, replace the href of both `<li>` to use a location hash inside of referencing a file, so, your nav items should look like this:
 
