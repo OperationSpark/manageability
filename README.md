@@ -113,3 +113,4 @@ A brief clean up of the website project to make markup and css more manageable
 
 11. Save, switch back to your website, reload, notice by default or `home.html` template loads, and clicking on the **Home** nav item does the same.
 12. Repeat this pattern for `portfolio.html`!
+13. Git add all, commit and push!
