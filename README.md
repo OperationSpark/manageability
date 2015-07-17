@@ -84,9 +84,11 @@ A brief clean up of the website project to make markup and css more manageable
 10.  Within the same `<script>` tag, define a function called `loadTemplate()`, like so:
 
 ````javascript
+// other code...
             function loadTemplate(template) {
                 $("main").load(template + '.html');
             }
+// other code...
 ````
 
 11. Save, switch back to your website, reload, notice by default or `home.html` template loads, and clicking on the **Home** nav item does the same.
