@@ -40,3 +40,54 @@ A brief clean up of the website project to make markup and css more manageable
 7. Save your `index.html`, switch back to your website, refresh: No nav!
 8. From the file explorer, in the root directory of your website, create file called `nav.html`, and paste in all of the markup on your clipboard. Format it appropriately by doing, in Cloud9, **Edit > Code Formatting > Auto Selected Formatter**, or `Ctrl + alt + f`.
 9. Save your `index.html`, switch back to your website, refresh: We got nav!
+10. Open the debugger and break within the `initialize()` function.
+
+### Fragmenting with Hash
+
+    See:
+    1. https://en.wikipedia.org/wiki/Fragment_identifier
+    2. http://blog.mgm-tp.com/2011/10/must-know-url-hashtechniques-for-ajax-applications/
+
+1. In the `nav.html` file, replace the href of both `<li>` to use a location hash inside of referencing a file, so, your nav items should look like this:
+
+````HTML
+<li><a href="#home">Home</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+````
+
+2. From the file explorer, create a new file called `home.html`, and open it in the text editor.
+3. From within the `index.html` file, cut and paste all of the markup between the opening and closing `<main></main>` tags, BUT LEAVE the `<main></main>` tags in place.
+4. Switch back to the `home.html` and paste in the markup on your clipboard, then format it: **Edit > Code Formatting > Auto Selected Formatter**, or `Ctrl + alt + f`.
+5. Google "JavaScript get location hash", and within the `index.html` file, create a variable called `hash` and assign it using the knowledge you've just gained.  
+6. Save, and switch to your website, debug and break to see what the hash equals when clicking on the **Home** nav item.
+7. We need to edit the `hash` var so we remove the `#`! Google "JavaScript String slice".
+8. Still within the `initialize()` function, clean up our code to include a new variable called `template`.
+9. Using the turnary operator, if we have a `hash` at all, assign the result of our `hash` slice to `template`, othewise, assign the value `home`
+9. Finally, call the method `loadTemplate(template);`, your full `initialize()` function should look like this:
+
+````javascript
+// other code...
+            
+            function initialize() {
+                var hash, template;
+                
+                $("nav").load("nav.html");
+                
+                hash = window.location.hash;
+                template = hash ? hash.slice(1) : 'home';
+                loadTemplate(template);
+            }
+            
+// other code...
+````
+
+10.  Within the same `<script>` tag, define a function called `loadTemplate()`, like so:
+
+````javascript
+            function loadTemplate(template) {
+                $("main").load(template + '.html');
+            }
+````
+
+11. Save, switch back to your website, reload, notice by default or `home.html` template loads, and clicking on the **Home** nav item does the same.
+12. Repeat this pattern for `portfolio.html`!
