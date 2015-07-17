@@ -38,5 +38,5 @@ A brief clean up of the website project to make markup and css more manageable
 
 6. Within the `index.html` file, cut and paste all of markup between the opening and closing `<nav></nav>` tags, BUT LEAVE the `<nav></nav>` in place.
 7. Save your `index.html`, switch back to your website, refresh: No nav!
-8. From the file explorer, in the root directory of your website, create file called `nav.html`, and paste in all of the markup on your clipboard. Format it appropriately by doing, in Cloud9 **Edit > Code Formatting > Auto Selected Formatter**, or `Ctrl + alt + f`.
+8. From the file explorer, in the root directory of your website, create file called `nav.html`, and paste in all of the markup on your clipboard. Format it appropriately by doing, in Cloud9, **Edit > Code Formatting > Auto Selected Formatter**, or `Ctrl + alt + f`.
 9. Save your `index.html`, switch back to your website, refresh: We got nav!
