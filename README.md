@@ -111,6 +111,50 @@ A brief clean up of the website project to make markup and css more manageable
     // other code...
     ````
 
-11. Save, switch back to your website, reload, notice by default or `home.html` template loads, and clicking on the **Home** nav item does the same.
-12. Repeat this pattern for `portfolio.html`!
-13. Git add all, commit and push!
+11. Finally, we need to know when the hash changes, so Google "HTML listen for hash change".  Answer: In the `<script>` tag, right after the first line of code that attaches the `ready` event handler, add:
+
+    ````javascript
+    // other code...
+            $(window).on('hashchange', function(){ 
+                loadTemplate(location.hash.slice(1));
+            });
+    // other code...
+    ````
+
+  You full `<script>` should look like this:
+    ````javascript
+        <script>
+            $(document).ready(initialize);
+            
+            $(window).on('hashchange', function(){ 
+                loadTemplate(location.hash.slice(1));
+            });
+            
+            function initialize() {
+                var template;
+                
+                $("nav").load("nav.html");
+                
+                template = window.location.hash.replace("#", "");
+                if (template === "") template = "home";
+                loadTemplate(template);
+            }
+            
+            function loadTemplate(template) {
+                $("main").load(template + '.html');
+            }
+        </script>
+    ````
+
+12. Save, switch back to your website, reload, notice by default or `home.html` template loads, and clicking on the **Home** nav item does the same.
+13. Repeat the extraction of the markup between `<main></main>` for `portfolio.html`! You need to keep everthing between the `<main></main>`, _and_ the `<script>` with the id of `portfolioScript`.  So your full `portfolio.html` should look like this:
+
+    ````javascript
+    <div class="content">
+        <h1>Portfolio</h1>
+        <ul id="portfolio">
+        </ul>
+    </div>
+    <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
+    ````
+14. Git add all, commit and push!
